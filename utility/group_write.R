@@ -1,6 +1,6 @@
 # group_write aims to split a data frame by unique values / combinations of columns
 # and write data associated with it into csv files separately 
-# it's a wrapper around group_split and group_walk
+# it relies on grouping functions from dplyr and `purrr::iwalk`
 # for alternatives that does not control file name see examples of group_walk  
 
 

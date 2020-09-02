@@ -1,5 +1,5 @@
-# This function converts the encoding of all files under a directory
-# it uses `readr::guess_encoding` to determine encoding of the original file
+# This function converts file encoding 
+# it uses `readr::guess_encoding` to determine the encoding of the original file
 # and convert it to UTF-8 or any other encoding
 # if the input is a single file path, it creates a new file with the specified encoding under the same directory
 # if the input is a directory, it creates a new directory alongside it with all converted files
