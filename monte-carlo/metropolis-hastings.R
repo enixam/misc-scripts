@@ -23,12 +23,12 @@ metropolis_hastings <- function(x_0 = sample(0:10, size = 1), num_iteration = 10
       x_t <- x_star
     }
     else {
-      x_t <- x_t
+      samp <- append(samp, x_t)
     }
   }
   samp
 }
 
-samp <- metropolis_hastings(x_0 = 0.5, num_iteration = 10000)
+samp <- metropolis_hastings(x_0 = 0.5, num_iteration = 50000)
 hist(samp, breaks = 50, freq = F)
 lines(density(rbeta(5000, 2, 2)), col = "red")
