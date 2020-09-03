@@ -12,21 +12,21 @@ p <- function(x_star, x_t) {
 }
 
 metropolis_hastings <- function(x_0 = sample(0:10, size = 1), num_iteration = 1000) {
-  samp <- x_0
+  samp <- vector("list", 0)
   x_t <- x_0
   for (i in 1:num_iteration) {
     x_star <- propose(x_t)
     accept_prob <- min(1, p(x_star = x_star, x_t = x_t))
     u <- runif(1)
     if (accept_prob > u) {
-      samp <- append(samp, x_star)
+      samp[[i]] <- x_star
       x_t <- x_star
     }
     else {
-      samp <- append(samp, x_t)
+      samp[[i]] <- x_t
     }
   }
-  samp
+  unlist(samp)
 }
 
 samp <- metropolis_hastings(x_0 = 0.5, num_iteration = 50000)
