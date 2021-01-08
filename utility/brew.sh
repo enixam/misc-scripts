@@ -36,7 +36,7 @@ brew outdated
 brew cleanup
 
 # install an application rather than cli (to Applications folder)
-brew cask install<app>
+brew cask install <app>
 
 # go to application homepage
 brew cask home <app>
