@@ -1,8 +1,8 @@
 # install brew
-# see mirror configuration at 
+# see mirror configuration at https://mirrors.ustc.edu.cn/help/homebrew-core.git.html
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# uninstall homebrew (uninstall cli but not casks)
+# uninstall homebrew (would uninstall brew-installed cli but not casks)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
 
 # check install
@@ -11,7 +11,7 @@ brew doctor
 # search a package (dispaly available formulae and casks)
 brew search <package>
 
-# install a package (to the usr/local/Cellar)
+# install a package (to usr/local/Cellar)
 brew install <package>
 
 # dispaly if a package is installed, version, location, dependencies and some analytics data
