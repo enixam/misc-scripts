@@ -1,3 +1,8 @@
+# edit global config
+git config --global --edit
+# local config
+git config --local --edit
+
 # clear git cache of a folder
 git rm --cached <filename> 
 # clear all git cache (this will delete all folders and files)
